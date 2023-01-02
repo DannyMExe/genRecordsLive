@@ -55,7 +55,7 @@ User.prototype.generateToken = function () {
       exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30,
       id: this.id,
     },
-    process.env.JWT
+    process.env.VITE_JWT
   );
 };
 
@@ -75,7 +75,7 @@ User.authenticate = async function ({ username, password }) {
 
 User.findByToken = async (token) => {
   try {
-    const { id } = await jwt.verify(token, process.env.JWT);
+    const { id } = await jwt.verify(token, process.env.VITE_JWT);
     const user = await User.findByPk(id);
     if (!user) {
       throw "";

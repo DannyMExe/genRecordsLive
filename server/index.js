@@ -7,7 +7,7 @@ const seed = require("./db/seed");
 
 const init = async () => {
   try {
-    process.env.SEED === "true" ? await seed() : await conn.sync();
+    process.env.VITE_SEED === "true" ? await seed() : await conn.sync();
     app.listen(PORT, () => {
       console.log();
       console.log(`  App running in port ${PORT}`);

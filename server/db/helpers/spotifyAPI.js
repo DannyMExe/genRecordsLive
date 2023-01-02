@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-const spotify_client_id = process.env.SPOTIFY_CLIENT_ID;
-const spotify_client_secret = process.env.SPOTIFY_CLIENT_SECRET;
+const spotify_client_id = process.env.VITE_SPOTIFY_CLIENT_ID;
+const spotify_client_secret = process.env.VITE_SPOTIFY_CLIENT_SECRET;
 const client_code = Buffer.from(
   `${spotify_client_id}:${spotify_client_secret}`
 ).toString("base64");

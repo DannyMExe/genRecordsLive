@@ -12,6 +12,7 @@ app.use(express.json());
 
 app.use("/", express.static(path.join(__dirname, "../public")));
 
+app.use("/src", require("./assets"));
 //PROJECT API ROUTES
 app.use("/api", require("./api"));
 
