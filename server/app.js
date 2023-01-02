@@ -17,8 +17,7 @@ app.use("/src", require("./assets"));
 app.use("/api", require("./api"));
 
 app.get("/*", (_req, res) => {
-  // res.sendFile(path.join(__dirname, "/public", "index.html"));
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile(path.join(__dirname, "/public", "index.html"));
 });
 
 //ERROR HANDLING FOR SERVER SIDE ISSUES
