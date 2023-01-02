@@ -11,7 +11,7 @@ const config = {
   logging: false,
 };
 let conn;
-if (process.env.PRODUCTION) {
+if (process.env.VITE_PRODUCTION) {
   conn = new Sequelize({
     database: process.env.DATABASE,
     username: process.env.DBUSERNAME,
