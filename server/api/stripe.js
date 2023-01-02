@@ -1,10 +1,10 @@
 const router = require("express").Router();
 
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const stripe = require("stripe")(process.env.VITE_STRIPE_SECRET_KEY);
 
 //API/STRIPE
 router.get("/config", (req, res) => {
-  res.send({ publishableKey: process.env.STRIPE_PUBLISHABLE_KEY });
+  res.send({ publishableKey: process.env.VITE_STRIPE_PUBLISHABLE_KEY });
 });
 
 router.post("/create-payment-intent", async (req, res, next) => {
