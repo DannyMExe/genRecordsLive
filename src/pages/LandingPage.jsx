@@ -22,20 +22,20 @@ const LandingPage = () => {
             Listen to music the way the{" "}
             <Link
               className="font-semibold text-shade-1 hover:text-highlight underline decoration-accent hover:decoration-highlight ease-in-out duration-300"
-              to={"/vinyls"}>
+              to={"/shop"}>
               producer
             </Link>{" "}
             intended!{" "}
             <Link
               className="font-semibold text-shade-1 hover:text-highlight underline decoration-accent hover:decoration-highlight ease-in-out duration-300"
-              to={"/vinyls"}>
+              to={"/shop"}>
               Find Vinyls
             </Link>{" "}
             from your favorite generation and more.
           </p>
 
           <Link
-            to={"/vinyls"}
+            to={"/shop"}
             className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-shade-1 bg-accent rounded-lg hover:bg-highlight hover:text-shade-9 focus:ring-4 focus:ring-blue-300 ease-in-out duration-300">
             Explore Vinyls
             <svg
@@ -56,17 +56,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-
-/*
-          <div className="absolute top-0 left-0 w-full h-full bg-shade-9 opacity-50 -z-10 rounded"></div>
-          <h1 className="text-6xl">
-            The Destination for <br /> Music Enthusiasts
-          </h1>
-          <button>
-            <Link
-              className="bg-accent px-5 py-2 rounded hover:text-shade-9 hover:bg-highlight ease-in-out duration-300"
-              to={"/vinyls"}>
-              Explore Vinyls
-            </Link>
-          </button>
-*/

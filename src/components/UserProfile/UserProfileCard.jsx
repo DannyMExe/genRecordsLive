@@ -3,7 +3,6 @@ import { logout } from "../../redux/features/authSlice";
 import defaultProfileImage from "./assets/defaultProfileImage.png";
 
 const UserProfileCard = ({ user: { firstName, lastName, username, img } }) => {
-  console.log(defaultProfileImage);
   const dispatch = useDispatch();
   return (
     <div className="w-full max-w-sm bg-shade-9 rounded-lg shadow-md">
