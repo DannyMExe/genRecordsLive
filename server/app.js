@@ -10,14 +10,14 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use("/", express.static(path.join(__dirname, "../public")));
+app.use("/", express.static(path.join(__dirname, "../dist")));
 
 app.use("/src", require("./assets"));
 //PROJECT API ROUTES
 app.use("/api", require("./api"));
 
 app.get("/*", (_req, res) => {
-  res.sendFile(path.join(__dirname, "../public", "index.html"));
+  res.sendFile(path.join(__dirname, "../dist", "index.html"));
 });
 
 //ERROR HANDLING FOR SERVER SIDE ISSUES
